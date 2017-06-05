@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add new employee</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/app.css" th:href="@{/css/app.css}" />
+</head>
+<body>
+	<div align="center">
+		<h1> Add an Employee </h1>
+	</div>
+	<div align="center">
+		<form action="#" th:action="@{/addEmployee}" th:object="${employee}"
+			method="post">
+			<p class="headerTxt">
+				Age: <input type="text" th:field="*{age}" />
+			</p>
+			<p class="headerTxt">
+				First Name: <input type="text" th:field="*{firstName}" />
+			</p>
+			<p class="headerTxt">
+				Last Name: <input type="text" th:field="*{lastName}" />
+			</p>
+
+			<p class="headerTxt">
+				City: <input type="text" th:field="*{empAddress.city}" />
+			</p>
+			<p class="headerTxt">
+				Country: <input type="text" th:field="*{empAddress.country}" />
+			</p>
+			<div>
+				<p>
+					<input type="submit" value="Add" /> <input class="headerTxt"
+						type="reset" value="Clear" />
+				</p>
+			</div>
+		</form>
+	</div>
+	<div align="center">
+		<nav>
+			<a href="employees.html" th:href="@{/getEmployees}">Cancel</a>
+		</nav>
+	</div>
+</body>
+</html>

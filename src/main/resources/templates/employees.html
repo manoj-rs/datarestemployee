@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employees</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/app.css" th:href="@{/css/app.css}" />
+
+</head>
+<body>
+	<div align="center">
+		<h1>Employees List</h1>
+	</div>
+	<div align="center">
+		<table>
+			<tr>
+				<th align="center" class="headerTxt">EmpID</th>
+				<th align="center" class="headerTxt">First Name</th>
+				<th align="center" class="headerTxt">Last Name</th>
+				<th align="center" class="headerTxt">Age</th>
+				<th align="center" class="headerTxt">City</th>
+				<th align="center" class="headerTxt">Country</th>
+			</tr>
+			<tr th:each="emp: ${employees}">
+				<td align="center" th:text="${emp.id}">id</td>
+				<td align="center" th:text="${emp.firstName}">first name</td>
+				<td align="center" th:text="${emp.lastName}">last name</td>
+				<td align="center" th:text="${emp.age}">id</td>
+				<td align="center" th:text="${emp.empAddress.city}">city</td>
+				<td align="center" th:text="${emp.empAddress.country}">country</td>
+				<td align="center"><a href="add_employee.html"
+					th:href="@{/updateEmployee/}+${emp.id}"><img align="top" width="24"
+						height="24" alt="edit" src="../static/images/edit.png"
+						th:src="@{/images/edit.png}"/></a></td>
+				<td align="center"><a href="add_employee.html" 
+					th:href="@{/deleteEmployee/}+${emp.id}" onclick="return confirm('Are you sure?')"><img align="top" width="24"
+						height="24" alt="delete" src="../static/images/delete.png"
+						th:src="@{/images/delete.png}"/></a></td>
+			</tr>
+		</table>
+		<div>
+			<nav>
+				<a href="add_employee.html" th:href="@{/addEmployee}">Add
+					Employee</a>
+			</nav>
+			<nav>
+				<a href="index.html" th:href="@{/index}">Go Home</a>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@font-face {
+	font-family: customfont;
+	src: url(SF-UI-Display-Regular.otf);
+}
+
+h1 {
+	font-family: customfont;
+	color: #666699;
+}
+
+td {
+	font-family: customfont;
+	color: #666699;
+}
+
+a {
+	font-family: customfont;
+	font-size: 18px;
+	color: #059900;
+}
+
+nav:hover {
+	font-weight: bold;
+}
+
+p {
+	font-family: customfont;
+	color: #059900;
+}
+
+.headerTxt {
+	font-family: customfont;
+	color: #4277f4;
+}
+
+input[type="text"] {
+	display: block;
+	margin: 0;
+	font-family: customfont;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	font-size: 18px;
+}
+
+input[type="submit"] {
+	display: inline-block;
+	margin: 0;
+	font-family: customfont;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+}
+
+input[type="reset"] {
+	display: inline-block;
+	margin: 0;
+	font-family: customfont;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+}
+
+input[type="text"]:focus {
+	outline: none;
+}
